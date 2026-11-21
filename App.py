@@ -6,9 +6,16 @@ MODEL = "gemini-3.6-flash"
 st.set_page_config(page_title="Amar Bot")
 st.title("🤖 Amar Bot")
 
-API_KEY = st.secrets.get("GEMINI_API_KEY", "")
+try:
+    API_KEY = st.secrets["GEMINI_API_KEY"]
+except Exception:
+    API_KEY = ""
+
 if not API_KEY:
-    st.error("Secrets e GEMINI_API_KEY pai nai ❌")
+    API_KEY = st.sidebar.text_input("Gemini API Key", type="password").strip()
+
+if not API_KEY:
+    st.sidebar.text_input("Gemini API Key")
     st.stop()
 
 if "messages" not in st.session_state:

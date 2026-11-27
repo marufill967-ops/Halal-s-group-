@@ -18,18 +18,25 @@
 .bar{background:#009688;color:#fff;display:flex;justify-content:space-around;padding:10px;font-size:13px;font-weight:bold}
 .mega{background:#ff8fab;margin:12px;padding:20px;border-radius:20px;text-align:center;color:#fff}
 .products{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.p{border:1px solid #eee;border-radius:15px;padding:10px;text-align:center}
-.p img{width:100%;border-radius:10px}
+.p{border:1px solid #eee;border-radius:15px;padding:10px;text-align:center;position:relative}
+.p img{width:100%;border-radius:10px;height:140px;object-fit:cover}
 .p b{color:#e91e63;font-size:18px}.p del{color:#999;font-size:13px}
 .p a{display:block;background:#25D366;color:#fff;text-decoration:none;padding:9px;border-radius:10px;margin-top:8px;font-weight:bold}
 .nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px;border-top:1px solid #ddd}
 .nav div{text-align:center;font-size:12px;color:#ff2e63;font-weight:bold}
 body{padding-bottom:70px}
 #adminBtn{position:fixed;top:60px;right:10px;background:#000;color:#fff;padding:8px 12px;border-radius:20px;font-size:12px;z-index:999;cursor:pointer}
-#adminPanel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:1000;padding:20px;overflow:auto}
-#adminPanel input{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px}
+#adminPanel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#f8f8f8;z-index:1000;padding:15px;overflow:auto}
+#adminPanel input{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:10px;background:#fff}
 #adminPanel button{width:100%;padding:12px;background:#25D366;color:#fff;border:0;border-radius:10px;font-weight:bold;margin-top:10px}
 .closeBtn{background:#ff2e63!important}
+.adminCard{background:#fff;border-radius:15px;padding:12px;margin:10px 0;border:1px solid #eee}
+.priceRow{display:flex;align-items:center;gap:6px}
+.priceRow button{width:45px!important;height:45px!important;padding:0!important;font-size:22px!important;border-radius:50%!important}
+.priceRow input{text-align:center;font-weight:bold;font-size:18px}
+.miniBtn{padding:8px!important;font-size:13px!important}
+.delBtn{background:#ff2e63!important}
+.addBtn{background:#000!important;font-size:18px!important;padding:16px!important}
 </style>
 </head>
 <body>
@@ -42,43 +49,41 @@ body{padding-bottom:70px}
 <div class="banner">
 <h2 id="bannerTitle">১০০% হালাল পণ্য<br>আপনার আস্থার ঠিকানা!</h2>
 <p>Halal Group - Best Price in Bangladesh</p>
-<a href="https://wa.me/8801854180397">MESSAGE করুন এখনই!</a>
+<a id="waBanner" href="https://wa.me/8801854180397">MESSAGE করুন এখনই!</a>
 </div>
 
 <div class="bar"><span>✅ Secure payment</span><span>🚚 Fast delivery</span><span>↩️ Easy exchange</span></div>
 
 <div class="mega"><h2>Halal Group<br>Mega sale is going on.</h2><p>Best products at best prices</p></div>
 
-<h2 style="padding:0 12px">Trending Products</h2>
+<h2 style="padding:0 12px">Trending Products (<span id="count">0</span> ta)</h2>
 <div class="products" id="productList"></div>
 
 <div class="nav"><div>🏠<br>Home</div><div>▦<br>Categories</div><div>🛒<br>Cart</div><div>👤<br>Account</div></div>
 
-<!-- ADMIN PANEL -->
+<!-- ADMIN PANEL PRO -->
 <div id="adminPanel">
-<h2>🔐 Halal Group Admin Dashboard</h2>
-<p>Khali tumi eikhane dhukte parba!</p>
+<h2>🔐 Halal Group Admin</h2>
+<p>Khali tumi - sob tomar kase!</p>
 <div id="loginBox">
 <input type="password" id="pass" placeholder="Password dao (1234)">
 <button onclick="login()">Login</button>
 <button class="closeBtn" onclick="closeAdmin()">Back to Website</button>
 </div>
+
 <div id="editBox" style="display:none">
-<label>Banner Lekha:</label>
-<input id="editBanner" placeholder="Banner lekha">
-<label>Product 1 - Nam:</label>
-<input id="p1name">
-<label>Product 1 - Dam:</label>
-<input id="p1price" type="number">
-<label>Product 2 - Nam:</label>
-<input id="p2name">
-<label>Product 2 - Dam:</label>
-<input id="p2price" type="number">
-<label>WhatsApp Number:</label>
-<input id="waNum" placeholder="8801XXXXXXXXX">
-<button onclick="saveAll()">✅ SAVE - Website e Change Koro</button>
+<label><b>Banner Lekha:</b></label>
+<input id="editBanner">
+<label><b>WhatsApp Number:</b></label>
+<input id="waNum">
+
+<h3 style="margin-top:15px">🛍️ Sob Product - <span id="adminCount"></span></h3>
+<div id="adminList"></div>
+
+<button class="addBtn" onclick="addProduct()">➕ + Notun Product Add Koro</button>
+<button onclick="saveAll()">✅ SAVE - Sob Change Website e Bosao</button>
 <button class="closeBtn" onclick="closeAdmin()">Close</button>
-<p style="margin-top:10px;font-size:13px;color:#666">Note: Eita tomar phone e save thakbe. Sobar phone e dekhate chaile pore amake koio, ami live admin banay dimu.</p>
+<p style="margin-top:10px;font-size:12px;color:#666">Tip: Dam er pashe + / - chaple dam barbe / kombe. Chobi change korte chaile Image Link e notun link dao.</p>
 </div>
 </div>
 
@@ -94,6 +99,8 @@ let wa = localStorage.getItem('halal_wa') || "8801854180397";
 
 function showProducts(){
 document.getElementById('bannerTitle').innerHTML = bannerText;
+document.getElementById('waBanner').href = "https://wa.me/"+wa;
+document.getElementById('count').innerText = products.length;
 let html="";
 products.forEach(p=>{
 html+=`<div class="p"><img src="${p.img}"><br>${p.name}<br><del>৳${p.old}</del> <b>৳${p.price}</b><a href="https://wa.me/${wa}?text=${p.name}%20order%20korte%20chai">Order Now</a></div>`;
@@ -104,30 +111,58 @@ showProducts();
 
 function openAdmin(){document.getElementById('adminPanel').style.display='block';}
 function closeAdmin(){document.getElementById('adminPanel').style.display='none';}
+
 function login(){
 if(document.getElementById('pass').value=="1234"){
 document.getElementById('loginBox').style.display='none';
 document.getElementById('editBox').style.display='block';
-document.getElementById('editBanner').value=bannerText;
-document.getElementById('p1name').value=products[0].name;
-document.getElementById('p1price').value=products[0].price;
-document.getElementById('p2name').value=products[1].name;
-document.getElementById('p2price').value=products[1].price;
-document.getElementById('waNum').value=wa;
+renderAdmin();
 }else{alert("Vul Password vai!");}
+}
+
+function renderAdmin(){
+document.getElementById('editBanner').value=bannerText;
+document.getElementById('waNum').value=wa;
+document.getElementById('adminCount').innerText = products.length + " ta";
+let h="";
+products.forEach((p,i)=>{
+h+=`<div class="adminCard">
+<b>Product ${i+1}</b>
+<label>Nam:</label><input value="${p.name}" oninput="products[${i}].name=this.value">
+<label>Dam ( + / - diya barao komao ):</label>
+<div class="priceRow">
+<button type="button" style="background:#ff2e63" onclick="changePrice(${i},-50)">-</button>
+<input type="number" value="${p.price}" oninput="products[${i}].price=this.value">
+<button type="button" onclick="changePrice(${i},50)">+</button>
+</div>
+<label>Agor Dam (kata dam):</label><input type="number" value="${p.old}" oninput="products[${i}].old=this.value">
+<label>Chobir Link:</label><input value="${p.img}" oninput="products[${i}].img=this.value">
+<button class="miniBtn delBtn" onclick="deleteProduct(${i})">🗑️ Ei Product Delete Koro</button>
+</div>`;
+});
+document.getElementById('adminList').innerHTML=h;
+}
+function changePrice(i,amount){
+products[i].price = parseInt(products[i].price||0) + amount;
+if(products[i].price<0) products[i].price=0;
+renderAdmin();
+}
+function addProduct(){
+products.push({name:"Notun Product", price:500, old:1000, img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"});
+renderAdmin();
+alert("Notun product add hoise! Ekhon nam-dam likho ar SAVE dao");
+}
+function deleteProduct(i){
+if(confirm("Ei product ta delete korba vai?")){products.splice(i,1);renderAdmin();}
 }
 function saveAll(){
 bannerText=document.getElementById('editBanner').value;
-products[0].name=document.getElementById('p1name').value;
-products[0].price=document.getElementById('p1price').value;
-products[1].name=document.getElementById('p2name').value;
-products[1].price=document.getElementById('p2price').value;
 wa=document.getElementById('waNum').value;
 localStorage.setItem('halal_products', JSON.stringify(products));
 localStorage.setItem('halal_banner', bannerText);
 localStorage.setItem('halal_wa', wa);
 showProducts();
-alert("Hoise vai! Website e change hoiya gese!");
+alert("Hoise vai! Sob change hoiya gese!");
 closeAdmin();
 }
 </script>

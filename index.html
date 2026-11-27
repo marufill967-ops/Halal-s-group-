@@ -3,168 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Halal Group - 100% Halal Product | Best Price in Bangladesh</title>
-<meta name="description" content="Halal Group - Bangladesh er sera halal online shop.">
+<title>Halal Group - 100% Halal Product</title>
 <style>
+/* CSS - Sajanor Kaj */
 *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
-.top{background:#ff5a7a;color:#fff;padding:12px;display:flex;align-items:center;justify-content:space-between}
+.top{background:#ff5a7a;color:#fff;padding:12px;display:flex;justify-content:space-between}
 .top b{font-size:22px}.top b span{color:yellow}
 .search{padding:10px;background:#ff5a7a;display:flex;gap:8px}
 .search input{flex:1;padding:12px;border-radius:10px;border:0}
 .search button{background:#00bfa5;color:#fff;border:0;padding:0 18px;border-radius:10px;font-size:20px}
 .banner{background:#e8f5e9;padding:20px;text-align:center}
-.banner h2{color:#1b5e20;font-size:28px}
-.banner a{background:#25D366;color:#fff;padding:10px 20px;border-radius:20px;display:inline-block;text-decoration:none;font-weight:bold}
-.bar{background:#009688;color:#fff;display:flex;justify-content:space-around;padding:10px;font-size:13px;font-weight:bold}
+.banner h2{color:#1b5e20;font-size:26px}
+.banner a{background:#25D366;color:#fff;padding:10px 20px;border-radius:20px;display:inline-block;text-decoration:none;font-weight:bold;margin-top:10px}
+.bar{background:#009688;color:#fff;display:flex;justify-content:space-around;padding:10px;font-size:13px}
 .mega{background:#ff8fab;margin:12px;padding:20px;border-radius:20px;text-align:center;color:#fff}
 .products{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.p{border:1px solid #eee;border-radius:15px;padding:10px;text-align:center;position:relative}
+.p{border:1px solid #eee;border-radius:15px;padding:10px;text-align:center}
 .p img{width:100%;border-radius:10px;height:140px;object-fit:cover}
 .p b{color:#e91e63;font-size:18px}.p del{color:#999;font-size:13px}
 .p a{display:block;background:#25D366;color:#fff;text-decoration:none;padding:9px;border-radius:10px;margin-top:8px;font-weight:bold}
 .nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px;border-top:1px solid #ddd}
 .nav div{text-align:center;font-size:12px;color:#ff2e63;font-weight:bold}
 body{padding-bottom:70px}
-#adminBtn{position:fixed;top:60px;right:10px;background:#000;color:#fff;padding:8px 12px;border-radius:20px;font-size:12px;z-index:999;cursor:pointer}
-#adminPanel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#f8f8f8;z-index:1000;padding:15px;overflow:auto}
+#adminBtn{position:fixed;top:60px;right:10px;background:#000;color:#fff;padding:8px 12px;border-radius:20px;font-size:12px;z-index:999}
+#adminPanel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#f0f2f5;z-index:1000;padding:15px;overflow:auto;padding-bottom:90px}
 #adminPanel input{width:100%;padding:12px;margin:6px 0;border:1px solid #ddd;border-radius:10px;background:#fff}
 #adminPanel button{width:100%;padding:12px;background:#25D366;color:#fff;border:0;border-radius:10px;font-weight:bold;margin-top:10px}
 .closeBtn{background:#ff2e63!important}
-.adminCard{background:#fff;border-radius:15px;padding:12px;margin:10px 0;border:1px solid #eee}
-.priceRow{display:flex;align-items:center;gap:6px}
-.priceRow button{width:45px!important;height:45px!important;padding:0!important;font-size:22px!important;border-radius:50%!important}
-.priceRow input{text-align:center;font-weight:bold;font-size:18px}
-.miniBtn{padding:8px!important;font-size:13px!important}
-.delBtn{background:#ff2e63!important}
-.addBtn{background:#000!important;font-size:18px!important;padding:16px!important}
+.fbCard{background:#fff;border-radius:15px;padding:12px;margin:10px 0}
+.fbCard img{width:100%;height:180px;object-fit:cover;border-radius:12px}
+.fbRow{display:flex;gap:8px;align-items:center}
+.fbRow button{padding:10px!important;margin:0!important}
+#msg{background:#1877F2;color:#fff;padding:10px;border-radius:10px;text-align:center;display:none;font-weight:bold;margin:10px 0}
 </style>
 </head>
 <body>
-
+<!-- HTML - Dokan er Kathamo -->
 <div id="adminBtn" onclick="openAdmin()">⚙️ Admin</div>
-
 <div class="top"><b>Halal <span>Group</span></b><div>বাং | EN</div></div>
-<div class="search"><input placeholder="🔍 Headphones"><button>🔍</button></div>
-
-<div class="banner">
-<h2 id="bannerTitle">১০০% হালাল পণ্য<br>আপনার আস্থার ঠিকানা!</h2>
-<p>Halal Group - Best Price in Bangladesh</p>
-<a id="waBanner" href="https://wa.me/8801854180397">MESSAGE করুন এখনই!</a>
-</div>
-
+<div class="search"><input placeholder="🔍 Search..."><button>🔍</button></div>
+<div class="banner"><h2 id="bannerTitle">১০০% হালাল পণ্য<br>আপনার আস্থার ঠিকানা!</h2><p>Halal Group - Best Price in Bangladesh</p><a id="waBanner" href="https://wa.me/8801854180397">MESSAGE করুন এখনই!</a></div>
 <div class="bar"><span>✅ Secure payment</span><span>🚚 Fast delivery</span><span>↩️ Easy exchange</span></div>
-
 <div class="mega"><h2>Halal Group<br>Mega sale is going on.</h2><p>Best products at best prices</p></div>
-
 <h2 style="padding:0 12px">Trending Products (<span id="count">0</span> ta)</h2>
 <div class="products" id="productList"></div>
-
 <div class="nav"><div>🏠<br>Home</div><div>▦<br>Categories</div><div>🛒<br>Cart</div><div>👤<br>Account</div></div>
 
-<!-- ADMIN PANEL PRO -->
+<!-- ADMIN - Facebook er moto -->
 <div id="adminPanel">
-<h2>🔐 Halal Group Admin</h2>
-<p>Khali tumi - sob tomar kase!</p>
-<div id="loginBox">
-<input type="password" id="pass" placeholder="Password dao (1234)">
-<button onclick="login()">Login</button>
-<button class="closeBtn" onclick="closeAdmin()">Back to Website</button>
-</div>
-
+<div style="background:#fff;padding:12px;display:flex;justify-content:space-between"><b>🔐 Halal Group Admin</b><button style="width:auto;background:#ff2e63" onclick="closeAdmin()">X</button></div>
+<div id="msg"></div>
+<div id="loginBox"><input type="password" id="pass" placeholder="Password - 1234"><button onclick="login()">Login</button></div>
 <div id="editBox" style="display:none">
-<label><b>Banner Lekha:</b></label>
-<input id="editBanner">
-<label><b>WhatsApp Number:</b></label>
-<input id="waNum">
-
-<h3 style="margin-top:15px">🛍️ Sob Product - <span id="adminCount"></span></h3>
+<div class="fbCard"><b>🖼️ Banner</b><input id="editBanner" oninput="saveData()"><label>WhatsApp:</label><input id="waNum" oninput="saveData()"></div>
+<h3 style="padding:0 5px">🛍️ Products</h3>
 <div id="adminList"></div>
-
-<button class="addBtn" onclick="addProduct()">➕ + Notun Product Add Koro</button>
-<button onclick="saveAll()">✅ SAVE - Sob Change Website e Bosao</button>
-<button class="closeBtn" onclick="closeAdmin()">Close</button>
-<p style="margin-top:10px;font-size:12px;color:#666">Tip: Dam er pashe + / - chaple dam barbe / kombe. Chobi change korte chaile Image Link e notun link dao.</p>
+<button style="background:#000!important;font-size:18px!important;padding:16px!important" onclick="addProduct()">➕ + Notun Product Add Koro</button>
+<button onclick="closeAdmin()">✅ Ses - Website Dekho</button>
 </div>
 </div>
+<input type="file" id="hiddenFile" accept="image/*" style="display:none">
 
 <script>
-let products = JSON.parse(localStorage.getItem('halal_products')) || [
-{name:"Headphones", price:850, old:1500, img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"},
-{name:"Classic Watch", price:1250, old:2000, img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"},
-{name:"Camera", price:3200, old:5000, img:"https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400"},
-{name:"Smart Watch", price:1890, old:3000, img:"https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400"}
-];
-let bannerText = localStorage.getItem('halal_banner') || "১০০% হালাল পণ্য";
-let wa = localStorage.getItem('halal_wa') || "8801854180397";
-
+/* JavaScript - Buddhir Kaj */
+let products=[];
+try{products=JSON.parse(localStorage.getItem('halal_products'))||[]}catch(e){products=[]}
+if(products.length==0){products=[
+{name:"Headphones",price:850,old:1500,img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"},
+{name:"Classic Watch",price:1250,old:2000,img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"},
+{name:"Camera",price:3200,old:5000,img:"https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400"},
+{name:"Smart Watch",price:1890,old:3000,img:"https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400"}
+];}
+let bannerText=localStorage.getItem('halal_banner')||"১০০% হালাল পণ্য";
+let wa=localStorage.getItem('halal_wa')||"8801854180397";
+let cur=-1;
+function showMsg(t){let m=document.getElementById('msg');m.innerText=t;m.style.display='block';setTimeout(()=>m.style.display='none',2000);}
 function showProducts(){
-document.getElementById('bannerTitle').innerHTML = bannerText;
-document.getElementById('waBanner').href = "https://wa.me/"+wa;
-document.getElementById('count').innerText = products.length;
-let html="";
-products.forEach(p=>{
-html+=`<div class="p"><img src="${p.img}"><br>${p.name}<br><del>৳${p.old}</del> <b>৳${p.price}</b><a href="https://wa.me/${wa}?text=${p.name}%20order%20korte%20chai">Order Now</a></div>`;
-});
-document.getElementById('productList').innerHTML=html;
+document.getElementById('bannerTitle').innerHTML=bannerText;
+document.getElementById('waBanner').href="https://wa.me/"+wa;
+document.getElementById('count').innerText=products.length;
+let h="";products.forEach(p=>{h+='<div class="p"><img src="'+p.img+'"><br>'+p.name+'<br><del>৳'+p.old+'</del> <b>৳'+p.price+'</b><a href="https://wa.me/'+wa+'?text='+p.name+' order korte chai">Order Now</a></div>';});
+document.getElementById('productList').innerHTML=h;
 }
 showProducts();
-
 function openAdmin(){document.getElementById('adminPanel').style.display='block';}
-function closeAdmin(){document.getElementById('adminPanel').style.display='none';}
-
-function login(){
-if(document.getElementById('pass').value=="1234"){
-document.getElementById('loginBox').style.display='none';
-document.getElementById('editBox').style.display='block';
-renderAdmin();
-}else{alert("Vul Password vai!");}
+function closeAdmin(){document.getElementById('adminPanel').style.display='none';showProducts();}
+function login(){if(document.getElementById('pass').value=="1234"){document.getElementById('loginBox').style.display='none';document.getElementById('editBox').style.display='block';renderAdmin();}else{showMsg("Vul Password!");}}
+function saveData(){
+let eb=document.getElementById('editBanner'); if(eb) bannerText=eb.value;
+let w=document.getElementById('waNum'); if(w) wa=w.value;
+localStorage.setItem('halal_products',JSON.stringify(products));
+localStorage.setItem('halal_banner',bannerText);
+localStorage.setItem('halal_wa',wa);
+showProducts();
 }
-
 function renderAdmin(){
 document.getElementById('editBanner').value=bannerText;
 document.getElementById('waNum').value=wa;
-document.getElementById('adminCount').innerText = products.length + " ta";
 let h="";
-products.forEach((p,i)=>{
-h+=`<div class="adminCard">
-<b>Product ${i+1}</b>
-<label>Nam:</label><input value="${p.name}" oninput="products[${i}].name=this.value">
-<label>Dam ( + / - diya barao komao ):</label>
-<div class="priceRow">
-<button type="button" style="background:#ff2e63" onclick="changePrice(${i},-50)">-</button>
-<input type="number" value="${p.price}" oninput="products[${i}].price=this.value">
-<button type="button" onclick="changePrice(${i},50)">+</button>
-</div>
-<label>Agor Dam (kata dam):</label><input type="number" value="${p.old}" oninput="products[${i}].old=this.value">
-<label>Chobir Link:</label><input value="${p.img}" oninput="products[${i}].img=this.value">
-<button class="miniBtn delBtn" onclick="deleteProduct(${i})">🗑️ Ei Product Delete Koro</button>
-</div>`;
-});
+for(let i=0;i<products.length;i++){let p=products[i];
+h+='<div class="fbCard"><b>'+(i+1)+'. '+p.name+'</b> <span style="color:red;float:right" onclick="deleteProduct('+i+')">🗑️ Delete</span>'
++'<img src="'+p.img+'" onclick="pickPhoto('+i+')"><p style="text-align:center;font-size:12px">📷 Chobite Click Korle Gallery Khulbo</p>'
++'<label>Nam:</label><input value="'+p.name+'" oninput="products['+i+'].name=this.value;saveData()">'
++'<label>Dam:</label><div class="fbRow"><button style="background:#ff2e63" onclick="changePrice('+i+',-100)">-100</button><input value="'+p.price+'" type="number" oninput="products['+i+'].price=this.value;saveData()" style="text-align:center;font-weight:bold"><button onclick="changePrice('+i+',100)">+100</button></div>'
++'<label>Agor Dam:</label><input type="number" value="'+p.old+'" oninput="products['+i+'].old=this.value;saveData()"></div>';
+}
 document.getElementById('adminList').innerHTML=h;
 }
-function changePrice(i,amount){
-products[i].price = parseInt(products[i].price||0) + amount;
-if(products[i].price<0) products[i].price=0;
-renderAdmin();
-}
-function addProduct(){
-products.push({name:"Notun Product", price:500, old:1000, img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"});
-renderAdmin();
-alert("Notun product add hoise! Ekhon nam-dam likho ar SAVE dao");
-}
-function deleteProduct(i){
-if(confirm("Ei product ta delete korba vai?")){products.splice(i,1);renderAdmin();}
-}
-function saveAll(){
-bannerText=document.getElementById('editBanner').value;
-wa=document.getElementById('waNum').value;
-localStorage.setItem('halal_products', JSON.stringify(products));
-localStorage.setItem('halal_banner', bannerText);
-localStorage.setItem('halal_wa', wa);
-showProducts();
-alert("Hoise vai! Sob change hoiya gese!");
-closeAdmin();
-}
+function changePrice(i,a){products[i].price=parseInt(products[i].price||0)+a;if(products[i].price<0)products[i].price=0;saveData();renderAdmin();showMsg("Dam: ৳"+products[i].price);}
+function addProduct(){products.push({name:"Notun Product "+(products.length+1),price:500,old:1000,img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"});saveData();renderAdmin();showMsg("✅ Notun Product Add Hoise! Niche dekho!");setTimeout(()=>{document.getElementById('adminPanel').scrollTo(0,99999);},300);}
+function deleteProduct(i){products.splice(i,1);saveData();renderAdmin();showMsg("Delete hoise!");}
+function pickPhoto(i){cur=i;document.getElementById('hiddenFile').click();}
+document.getElementById('hiddenFile').addEventListener('change',function(e){
+let f=e.target.files[0];if(!f)return;let r=new FileReader();
+r.onload=function(ev){products[cur].img=ev.target.result;saveData();renderAdmin();showMsg("✅ Chobi Change Hoise!");};
+r.readAsDataURL(f);e.target.value="";
+});
 </script>
 </body>
 </html>

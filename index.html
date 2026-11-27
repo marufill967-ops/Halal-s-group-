@@ -3,28 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Halal's Group - 100% Halal Product | Best Price in Bangladesh</title>
-<meta name="description" content="Halal Group - Bangladesh er sera halal online shop. Headphone, Watch, Smart Watch kom dame kinun. Fast delivery. Order: 01854180397">
-<meta name="keywords" content="Halal Group, Halals Group, Hala's group, halal shop bangladesh">
+<title>Halal Group - 100% Halal Product | Best Price in Bangladesh</title>
+<meta name="description" content="Halal Group - Bangladesh er sera halal online shop.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
 .top{background:#ff5a7a;color:#fff;padding:12px;display:flex;align-items:center;justify-content:space-between}
 .top b{font-size:22px}.top b span{color:yellow}
-.coins{background:#ffe27a;color:#000;padding:6px 14px;border-radius:20px;font-weight:bold}
 .search{padding:10px;background:#ff5a7a;display:flex;gap:8px}
 .search input{flex:1;padding:12px;border-radius:10px;border:0}
 .search button{background:#00bfa5;color:#fff;border:0;padding:0 18px;border-radius:10px;font-size:20px}
-.banner{background:#ffe6ec;padding:20px;text-align:center}
-.banner h2{color:#d81b60;font-size:28px}
-.banner p{margin:8px 0}.banner a{background:#ff2e63;color:#fff;padding:10px 20px;border-radius:20px;display:inline-block;text-decoration:none;font-weight:bold}
+.banner{background:#e8f5e9;padding:20px;text-align:center}
+.banner h2{color:#1b5e20;font-size:28px}
+.banner a{background:#25D366;color:#fff;padding:10px 20px;border-radius:20px;display:inline-block;text-decoration:none;font-weight:bold}
 .bar{background:#009688;color:#fff;display:flex;justify-content:space-around;padding:10px;font-size:13px;font-weight:bold}
-.cards{display:flex;gap:10px;padding:12px}
-.card{flex:1;background:#fff3cd;padding:15px;border-radius:15px}
-.card h3{font-size:20px}.card p{color:green;font-weight:bold}
-.card2{flex:1;text-align:center;background:#e0f2f1;padding:15px;border-radius:15px}
 .mega{background:#ff8fab;margin:12px;padding:20px;border-radius:20px;text-align:center;color:#fff}
-.mega h2{font-size:28px}.mega span{background:#ff2e63;padding:5px 12px;border-radius:15px}
-.offer{display:inline-block;background:#ff5722;color:#fff;padding:8px 12px;border-radius:10px;margin-top:10px;font-weight:bold}
 .products{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .p{border:1px solid #eee;border-radius:15px;padding:10px;text-align:center}
 .p img{width:100%;border-radius:10px}
@@ -33,44 +25,111 @@
 .nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px;border-top:1px solid #ddd}
 .nav div{text-align:center;font-size:12px;color:#ff2e63;font-weight:bold}
 body{padding-bottom:70px}
+#adminBtn{position:fixed;top:60px;right:10px;background:#000;color:#fff;padding:8px 12px;border-radius:20px;font-size:12px;z-index:999;cursor:pointer}
+#adminPanel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:1000;padding:20px;overflow:auto}
+#adminPanel input{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px}
+#adminPanel button{width:100%;padding:12px;background:#25D366;color:#fff;border:0;border-radius:10px;font-weight:bold;margin-top:10px}
+.closeBtn{background:#ff2e63!important}
 </style>
 </head>
 <body>
 
-<div class="top"><b>Halal's <span>World</span></b><div class="coins">🪙 Free coins</div><div>বাং | EN</div></div>
+<div id="adminBtn" onclick="openAdmin()">⚙️ Admin</div>
 
+<div class="top"><b>Halal <span>Group</span></b><div>বাং | EN</div></div>
 <div class="search"><input placeholder="🔍 Headphones"><button>🔍</button></div>
 
 <div class="banner">
-<h2>দুই ব্র্যান্ড, এক লক্ষ্য<br>আপনার সাফল্য!</h2>
-<p>Halal's group x MayonsBD</p>
+<h2 id="bannerTitle">১০০% হালাল পণ্য<br>আপনার আস্থার ঠিকানা!</h2>
+<p>Halal Group - Best Price in Bangladesh</p>
 <a href="https://wa.me/8801854180397">MESSAGE করুন এখনই!</a>
 </div>
 
 <div class="bar"><span>✅ Secure payment</span><span>🚚 Fast delivery</span><span>↩️ Easy exchange</span></div>
 
-<div class="cards">
-<div class="card"><h3>Coins<br>Up to 80% off</h3><br><b>Get it now ></b></div>
-<div class="card2"><div style="font-size:35px">🔥</div><b>Sale Live Now</b></div>
-<div class="card2"><div style="font-size:35px">🏷️</div><b>Low prices every day</b></div>
-</div>
-
-<div class="mega">
-<h2>Halal's group <br>Mega sale is going on.</h2>
-<p>Best products at the best prices - limited time</p>
-<span>50% Discount</span><br>
-<div class="offer">🔥 Hot offers<br>If you take 2<br>৳50 off</div>
-</div>
+<div class="mega"><h2>Halal Group<br>Mega sale is going on.</h2><p>Best products at best prices</p></div>
 
 <h2 style="padding:0 12px">Trending Products</h2>
-<div class="products">
-<div class="p"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"><br>Headphones<br><del>৳1500</del> <b>৳850</b><a href="https://wa.me/8801854180397?text=Headphones%20order%20korte%20chai">Order Now</a></div>
-<div class="p"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"><br>Classic Watch<br><del>৳2000</del> <b>৳1250</b><a href="https://wa.me/8801854180397?text=Watch%20order%20korte%20chai">Order Now</a></div>
-<div class="p"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400"><br>Camera<br><del>৳5000</del> <b>৳3200</b><a href="https://wa.me/8801854180397?text=Camera%20order%20korte%20chai">Order Now</a></div>
-<div class="p"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400"><br>Smart Watch<br><del>৳3000</del> <b>৳1890</b><a href="https://wa.me/8801854180397?text=Smart%20Watch%20order%20korte%20chai">Order Now</a></div>
-</div>
+<div class="products" id="productList"></div>
 
 <div class="nav"><div>🏠<br>Home</div><div>▦<br>Categories</div><div>🛒<br>Cart</div><div>👤<br>Account</div></div>
 
+<!-- ADMIN PANEL -->
+<div id="adminPanel">
+<h2>🔐 Halal Group Admin Dashboard</h2>
+<p>Khali tumi eikhane dhukte parba!</p>
+<div id="loginBox">
+<input type="password" id="pass" placeholder="Password dao (1234)">
+<button onclick="login()">Login</button>
+<button class="closeBtn" onclick="closeAdmin()">Back to Website</button>
+</div>
+<div id="editBox" style="display:none">
+<label>Banner Lekha:</label>
+<input id="editBanner" placeholder="Banner lekha">
+<label>Product 1 - Nam:</label>
+<input id="p1name">
+<label>Product 1 - Dam:</label>
+<input id="p1price" type="number">
+<label>Product 2 - Nam:</label>
+<input id="p2name">
+<label>Product 2 - Dam:</label>
+<input id="p2price" type="number">
+<label>WhatsApp Number:</label>
+<input id="waNum" placeholder="8801XXXXXXXXX">
+<button onclick="saveAll()">✅ SAVE - Website e Change Koro</button>
+<button class="closeBtn" onclick="closeAdmin()">Close</button>
+<p style="margin-top:10px;font-size:13px;color:#666">Note: Eita tomar phone e save thakbe. Sobar phone e dekhate chaile pore amake koio, ami live admin banay dimu.</p>
+</div>
+</div>
+
+<script>
+let products = JSON.parse(localStorage.getItem('halal_products')) || [
+{name:"Headphones", price:850, old:1500, img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"},
+{name:"Classic Watch", price:1250, old:2000, img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"},
+{name:"Camera", price:3200, old:5000, img:"https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400"},
+{name:"Smart Watch", price:1890, old:3000, img:"https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400"}
+];
+let bannerText = localStorage.getItem('halal_banner') || "১০০% হালাল পণ্য";
+let wa = localStorage.getItem('halal_wa') || "8801854180397";
+
+function showProducts(){
+document.getElementById('bannerTitle').innerHTML = bannerText;
+let html="";
+products.forEach(p=>{
+html+=`<div class="p"><img src="${p.img}"><br>${p.name}<br><del>৳${p.old}</del> <b>৳${p.price}</b><a href="https://wa.me/${wa}?text=${p.name}%20order%20korte%20chai">Order Now</a></div>`;
+});
+document.getElementById('productList').innerHTML=html;
+}
+showProducts();
+
+function openAdmin(){document.getElementById('adminPanel').style.display='block';}
+function closeAdmin(){document.getElementById('adminPanel').style.display='none';}
+function login(){
+if(document.getElementById('pass').value=="1234"){
+document.getElementById('loginBox').style.display='none';
+document.getElementById('editBox').style.display='block';
+document.getElementById('editBanner').value=bannerText;
+document.getElementById('p1name').value=products[0].name;
+document.getElementById('p1price').value=products[0].price;
+document.getElementById('p2name').value=products[1].name;
+document.getElementById('p2price').value=products[1].price;
+document.getElementById('waNum').value=wa;
+}else{alert("Vul Password vai!");}
+}
+function saveAll(){
+bannerText=document.getElementById('editBanner').value;
+products[0].name=document.getElementById('p1name').value;
+products[0].price=document.getElementById('p1price').value;
+products[1].name=document.getElementById('p2name').value;
+products[1].price=document.getElementById('p2price').value;
+wa=document.getElementById('waNum').value;
+localStorage.setItem('halal_products', JSON.stringify(products));
+localStorage.setItem('halal_banner', bannerText);
+localStorage.setItem('halal_wa', wa);
+showProducts();
+alert("Hoise vai! Website e change hoiya gese!");
+closeAdmin();
+}
+</script>
 </body>
 </html>

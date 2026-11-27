@@ -1,23 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
-<title>My Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halal's group</title>
 <style>
-body { font-family: Arial; text-align: center; background: #f2f2f2; }
-.shop { background: white; width: 300px; margin: 50px auto; padding: 20px; border-radius: 10px; }
-img { width: 100%; border-radius: 10px; }
-button { background: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+.top{background:#ff5a7a;color:#fff;padding:12px;display:flex;align-items:center;justify-content:space-between}
+.top b{font-size:22px}.top b span{color:yellow}
+.coins{background:#ffe27a;color:#000;padding:6px 14px;border-radius:20px;font-weight:bold}
+.search{padding:10px;background:#ff5a7a;display:flex;gap:8px}
+.search input{flex:1;padding:12px;border-radius:10px;border:0}
+.search button{background:#00bfa5;color:#fff;border:0;padding:0 18px;border-radius:10px;font-size:20px}
+.banner{background:#ffe6ec;padding:20px;text-align:center}
+.banner h2{color:#d81b60;font-size:28px}
+.banner p{margin:8px 0}.banner a{background:#ff2e63;color:#fff;padding:10px 20px;border-radius:20px;display:inline-block;text-decoration:none;font-weight:bold}
+.bar{background:#009688;color:#fff;display:flex;justify-content:space-around;padding:10px;font-size:13px;font-weight:bold}
+.cards{display:flex;gap:10px;padding:12px}
+.card{flex:1;background:#fff3cd;padding:15px;border-radius:15px}
+.card h3{font-size:20px}.card p{color:green;font-weight:bold}
+.card2{flex:1;text-align:center;background:#e0f2f1;padding:15px;border-radius:15px}
+.mega{background:#ff8fab;margin:12px;padding:20px;border-radius:20px;text-align:center;color:#fff}
+.mega h2{font-size:28px}.mega span{background:#ff2e63;padding:5px 12px;border-radius:15px}
+.offer{display:inline-block;background:#ff5722;color:#fff;padding:8px 12px;border-radius:10px;margin-top:10px;font-weight:bold}
+.products{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.p{border:1px solid #eee;border-radius:15px;padding:10px;text-align:center}
+.p img{width:100%;border-radius:10px}
+.p b{color:#e91e63;font-size:18px}.p del{color:#999;font-size:13px}
+.p a{display:block;background:#25D366;color:#fff;text-decoration:none;padding:9px;border-radius:10px;margin-top:8px;font-weight:bold}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px;border-top:1px solid #ddd}
+.nav div{text-align:center;font-size:12px;color:#ff2e63;font-weight:bold}
+body{padding-bottom:70px}
 </style>
 </head>
 <body>
 
-<div class="shop">
-<h1>My Shop</h1>
-<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500">
-<h2>Classic Watch</h2>
-<p>Price: $50</p>
-<button>Add to Cart</button>
+<div class="top"><b>Halal's <span>World</span></b><div class="coins">🪙 Free coins</div><div>বাং | EN</div></div>
+
+<div class="search"><input placeholder="🔍 Headphones"><button>🔍</button></div>
+
+<div class="banner">
+<h2>দুই ব্র্যান্ড, এক লক্ষ্য<br>আপনার সাফল্য!</h2>
+<p>Halal's group x MayonsBD</p>
+<a href="https://wa.me/8801854180397">MESSAGE করুন এখনই!</a>
 </div>
+
+<div class="bar"><span>✅ Secure payment</span><span>🚚 Fast delivery</span><span>↩️ Easy exchange</span></div>
+
+<div class="cards">
+<div class="card"><h3>Coins<br>Up to 80% off</h3><br><b>Get it now ></b></div>
+<div class="card2"><div style="font-size:35px">🔥</div><b>Sale Live Now</b></div>
+<div class="card2"><div style="font-size:35px">🏷️</div><b>Low prices every day</b></div>
+</div>
+
+<div class="mega">
+<h2>Halal's group <br>Mega sale is going on.</h2>
+<p>Best products at the best prices - limited time</p>
+<span>50% Discount</span><br>
+<div class="offer">🔥 Hot offers<br>If you take 2<br>৳50 off</div>
+</div>
+
+<h2 style="padding:0 12px">Trending Products</h2>
+<div class="products">
+<div class="p"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"><br>Headphones<br><del>৳1500</del> <b>৳850</b><a href="https://wa.me/8801854180397?text=Headphones%20order%20korte%20chai">Order Now</a></div>
+<div class="p"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"><br>Classic Watch<br><del>৳2000</del> <b>৳1250</b><a href="https://wa.me/8801854180397?text=Watch%20order%20korte%20chai">Order Now</a></div>
+<div class="p"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400"><br>Camera<br><del>৳5000</del> <b>৳3200</b><a href="https://wa.me/8801854180397?text=Camera%20order%20korte%20chai">Order Now</a></div>
+<div class="p"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400"><br>Smart Watch<br><del>৳3000</del> <b>৳1890</b><a href="https://wa.me/8801854180397?text=Smart%20Watch%20order%20korte%20chai">Order Now</a></div>
+</div>
+
+<div class="nav"><div>🏠<br>Home</div><div>▦<br>Categories</div><div>🛒<br>Cart</div><div>👤<br>Account</div></div>
 
 </body>
 </html>
